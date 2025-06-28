@@ -113,7 +113,6 @@ train_svm_model <- function(train_data, tune = FALSE) {
   
   # Training with parallel backend
   tryCatch({
-    # 启动并行集群
     cl <- makeCluster(detectCores() - 1)
     registerDoParallel(cl)
     
