@@ -1,12 +1,6 @@
 ﻿
-
-
-> Written with [StackEdit](https://stackedit.io/).
-> **
-
 ## VirPred:Influenza Virus Pathogenicity Prediction Toolkit
 
-**  
 VirPred is a machine learning-based tool for predicting influenza virus pathogenicity using host transcriptomic profiles. The tool accepts both RNA-Seq data (raw counts or normalized expressions including log2TPM, log2FPKM, log2RPKM, logCPM...) and microarray data (log-transformed normalized expressions).
 
 **Install VirPred**
@@ -25,11 +19,15 @@ VirPred is a machine learning-based tool for predicting influenza virus pathogen
     source ~/.bashrc
 
 **Parameter Function**
-|-i/--input  | input file; path to expression data file(csv) with genes as  rows and samples as columns
-|
-|-f /--format|{Normalize/Counts}, data format type, default:Normalize. For RNA-Seq raw Counts ,use -f  Counts ; or Normalized data,such as log2TPM/FPKM/RPKM,logCPM, or log-transformed normalized microarray data, use default parameter|
-| -o/--output | Output directory path (default:current directory) |
-|-p/--prefix|Output file prefix (default : "VirPred_results")|
+
+ - -i/--input: 
+ input file; path to expression data file(csv) with genes as  rows and samples as columns
+ - -f /--format:
+ Specifies input data mode (default: `Normalize`). For RNA-Seq raw count data (e.g., from featureCounts/HTSeq), explicitly use `-f Counts` . For normalized data (log2TPM/FPKM/RPKM for RNA-Seq or log-transformed microarray data), use the default `Normalize` mode .
+ - -o/--output:
+ Output directory path (default:current directory)
+ - -p/--prefix:
+ Output file prefix (default : "VirPred_results")
 
 **Example**
 
