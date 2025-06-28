@@ -5,17 +5,14 @@ VirPred is a machine learning-based tool for predicting influenza virus pathogen
 
 **Install VirPred**
 
-    # Create new conda env and install R
+    # Step1: Download VirPred from GitHub using Git
+    git clone https://github.com/xinglianWang/VirPred.git
+    # Step2: Create a new conda environment and install R
     conda create -n VirPred -c conda-forge r-base=4.4
-    # Activate env
     conda activate VirPred
-    # Install GSVA
-    conda install bioconda::bioconductor-gsva
-    # Download and install VirPred
-    wget https://github.com/xinglianWang/VirPred/archive/refs/heads/main.zip
-    unzip main.zip
-    cd VirPred-main
-    make install
+    # Step 3: Install required R packages and set up VirPred
+    conda install bioconda::bioconductor-gsva 
+    make -C ./VirPred install
     source ~/.bashrc
 
 **Parameter Function**
