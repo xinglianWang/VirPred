@@ -19,11 +19,11 @@ install: install-dependencies
 
 	# Check if the target directory is in PATH, and add it if not
 	@echo "Checking if $(TARGET_DIR) is in PATH..."
-	@grep -q "$(TARGET_DIR)" ~/.bashrc || echo 'export PATH="$$HOME/.local/bin:$$PATH"' >> ~/.bashrc
+	@grep -q "$(TARGET_DIR)" ~/.bashrc || echo 'export PATH="$(TARGET_DIR):$$PATH"' >> ~/.bashrc
 	@echo "Path to .local/bin has been added to ~/.bashrc."
 
 	# If using zsh, also update ~/.zshrc
-	@grep -q "$(TARGET_DIR)" ~/.zshrc || echo 'export PATH="$$HOME/.local/bin:$$PATH"' >> ~/.zshrc
+	@grep -q "$(TARGET_DIR)" ~/.zshrc || echo 'export PATH="$(TARGET_DIR):$$PATH"' >> ~/.zshrc
 	@echo "Path to .local/bin has been added to ~/.zshrc."
 
 	# Prompt user to source the shell config file to update PATH
